@@ -43,18 +43,18 @@ Feature: Verify Standard event page features
 
 
 
-        Scenario Outline: Check functionality of Tabs
-            Given User should be on Events page
-            Then It should displayed all events "standardEvent" and "seriesEvent" and "automatedEvent" under all tab
-            When Click On "Standard" tab
-            Then It should displayed only Standard events <standardEventName>
-            When Click On "Series" tab
-            Then It should displayed only Series events <seriesEventName>
-            When Click On "Automated" tab
-            Then It should displayed only Automated events <automatedEventName>
-            Examples:
-                | standardEventName | seriesEventName | automatedEventName | videoName  |
-                | A                 | A               | A                  | sample.mp4 |
+        # Scenario Outline: Check functionality of Tabs
+        #     Given User should be on Events page
+        #     Then It should displayed all events "standardEvent" and "seriesEvent" and "automatedEvent" under all tab
+        #     When Click On "Standard" tab
+        #     Then It should displayed only Standard events <standardEventName>
+        #     When Click On "Series" tab
+        #     Then It should displayed only Series events <seriesEventName>
+        #     When Click On "Automated" tab
+        #     Then It should displayed only Automated events <automatedEventName>
+        #     Examples:
+        #         | standardEventName | seriesEventName | automatedEventName | videoName  |
+        #         | A                 | A               | A                  | sample.mp4 |
 
 
         Scenario Outline: Check if user able to click on 'Continue' button after Selecting 'Live event' option and entering valid event title

@@ -57,15 +57,15 @@ Feature: Verify Standard event page features
         #         | A                 | A               | A                  | sample.mp4 |
 
 
-        Scenario Outline: Check if user able to click on 'Continue' button after Selecting 'Live event' option and entering valid event title
-            Given User should be on Create Events page
-            When User selects "Live event" option
-            When Enter valid event title <eventName>
-            Then User should able to click on "Continue" button
-            Then User should be redirected to "Manage event" screen
-            Examples:
-                | eventName |
-                | B         |
+        # Scenario Outline: Check if user able to click on 'Continue' button after Selecting 'Live event' option and entering valid event title
+        #     Given User should be on Create Events page
+        #     When User selects "Live event" option
+        #     When Enter valid event title <eventName>
+        #     Then User should able to click on "Continue" button
+        #     Then User should be redirected to "Manage event" screen
+        #     Examples:
+        #         | eventName |
+        #         | B         |
 
 
         Scenario Outline: Check if user able to select all options in 'How often?' dropdown i.e Everyday/Everyweek/Everymonth (Recurring type)

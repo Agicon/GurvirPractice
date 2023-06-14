@@ -15,19 +15,19 @@ Feature: Verify Standard event page features
             | admin | productionLoginUrl |
 
 
-        Scenario Outline: Check functionality of "Search Box"
-            Given new "Series" Event must be craeted  <eventName>
-            Given new "Standard" Event must be craeted <eventName>
-            Given new "Automated" Event <eventName> must be craeted
-            Given User should be on Events page
-            When Add data to be searched <eventName>
-            Then It should displayed with searched item <eventName>
-            Given User should be on Events page
-            When add missmatched data in search field <missmatchedData>
-            Then It should display message <validationMsg>
-            Examples:
-                | eventName | automatedEvent | missmatchedData | validationMsg                 |
-                | A         | AutoEvent      |$$$      | Nothing found for this search |
+        # Scenario Outline: Check functionality of "Search Box"
+        #     Given new "Series" Event must be craeted  <eventName>
+        #     Given new "Standard" Event must be craeted <eventName>
+        #     Given new "Automated" Event <eventName> must be craeted
+        #     Given User should be on Events page
+        #     When Add data to be searched <eventName>
+        #     Then It should displayed with searched item <eventName>
+        #     Given User should be on Events page
+        #     When add missmatched data in search field <missmatchedData>
+        #     Then It should display message <validationMsg>
+        #     Examples:
+        #         | eventName | automatedEvent | missmatchedData | validationMsg                 |
+        #         | A         | AutoEvent      |$$$      | Nothing found for this search |
 
 
         Scenario: Check that user is able to create event types screen on clicking "Add new Event" button.

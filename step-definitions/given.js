@@ -729,7 +729,7 @@ Given(/^Resource should be created with Featured title (.*) and featureUrl (.*) 
 
 
 });
-
+ //====//
 Given(/^Template option (.*) must be selected by admin$/, {}, (option) => {
   EventPage.clickOnCustomizeTab();
   EventPage.clickOnRegistrationTab();

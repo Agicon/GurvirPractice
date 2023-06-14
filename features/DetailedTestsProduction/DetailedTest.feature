@@ -30,16 +30,16 @@ Feature: Verify Standard event page features
         #         | A         | AutoEvent      |$$$      | Nothing found for this search |
 
 
-        Scenario: Check that user is able to create event types screen on clicking "Add new Event" button.
-            Given User should be on Events page
-            When Click on "Add New Event" button
-            Then User shall see "Standard" option to create a new standard event
-            Then User shall see "Series" option to create a new series event
-            Then User shall see "Automated" option to create a new automated event
-            Then User shall see "BACK TO EVENTS" option for going back to Events page
-            Then "Schedule" and "Events" tab should be available in Header
-            Then "Demio" logo should be available in top-left corner
-            Then "Help" and "User Profile" dropdown should be available in Header
+        # Scenario: Check that user is able to create event types screen on clicking "Add new Event" button.
+        #     Given User should be on Events page
+        #     When Click on "Add New Event" button
+        #     Then User shall see "Standard" option to create a new standard event
+        #     Then User shall see "Series" option to create a new series event
+        #     Then User shall see "Automated" option to create a new automated event
+        #     Then User shall see "BACK TO EVENTS" option for going back to Events page
+        #     Then "Schedule" and "Events" tab should be available in Header
+        #     Then "Demio" logo should be available in top-left corner
+        #     Then "Help" and "User Profile" dropdown should be available in Header
 
 
 

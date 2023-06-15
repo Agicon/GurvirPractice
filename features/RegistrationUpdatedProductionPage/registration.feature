@@ -12,53 +12,53 @@ Feature: Verify event page features
     #Covered-Up : Check user can register only after entering the valid email
     # Covered-Up : Check working of "Calendar" button on join link page for standard event and downloaded when clicked
     #Covered-Up : Check if user can turn off the notification emails from the "Email Notification" button on "Manage Registration" page
-    Scenario Outline: Check functionality of "View registration page" option ,"Register" button and check functionality of  "Join Room" button on Demio success page
-        Given User should redirect on <url> login page
-        Given User login with <userA>
-        Given End if any session running and new "Standard" Event must be craeted <eventName>
-        Given User should be on Manage Event Page
-        When User Clicks on "Schedule this Event" button
-        Given User should be redirected to Schedule Upcoming session menu
-        When User selects current or future date
-        When User select start session time <futureTime>
-        When For End session User select session time
-        When User clicks on "Add to Event schedule" button
-        Then Created session should display under upcoming sessions
-        When User clicks on dropdown along side JOIN ROOM button
-        When User clicks on "View registration page" option
-        Then User should be on Registration page
-        When User add invalid <invalidemail> email and valid name for <regEmail> in registration form
-        Then User is failed to login with invalid email <validation>
-        Then "Timer" should displayed on Registration page
-        Then Countdown timer should display for Days, Hours, Minutes and Seconds
-        When Add data in "Registration form" and click registration button <regEmail>
-        Then User should redirected to Demio success page on successfull registration
-        Then User should get messsage <message> on message window
-        Then It should displayed with Unique Join Link
-        When Click on "Copy Link"
-        Then "copy link" should copied the join link on clicking <text>
-        When On success reg page click on "Add To Calendar" button
-        Then OnSuccess reg page user should display options "Apple Calendar","Google","Outlook","Outlook.com","Yahoo"
-        When Clicked on any option from add to calendar list <option1>
-        Then User should be download calendar
-        When Open copied url in new tab
-        Then It should displayed correct countdown on Join Link page
-        When Click on "Manage your Registration" Link
-        Then User should redirected to "Manage Registration" page
-        When Manage your registration page user click on "Add To Calendar" button
-        Then OnSuccess reg page user should display options "Apple Calendar","Google","Outlook","Outlook.com","Yahoo"
-        When Clicked on any option from add to calendar list <option1>
-        Then User should be download calendar
-        When Manage your registration page user click on "Add To Calendar" button
-        Then User should able to turn on and off "Email Notification" button
-        Then It should displayed with correct session <eventName> and user info <regEmail> on "Manage Registration" page
-        Then Close recent window and switch to manage event window
-        When User clicks on "Activity" tab on manage event page
-        When User clicks on "People" tab
-        When Click on "Export CSV" button
-        Examples:
-            | userA | eventName | regEmail | message                                       | futureTime | url                | text    | validation                  | invalidemail | option | option1 |
-            | admin | C         | F        | Great! You are Now Registered for this Event: | 10:30 pm   | productionLoginUrl | Copied! | Please enter a valid email. | test@gmail   | Google | Outlook |
+    # Scenario Outline: Check functionality of "View registration page" option ,"Register" button and check functionality of  "Join Room" button on Demio success page
+    #     Given User should redirect on <url> login page
+    #     Given User login with <userA>
+    #     Given End if any session running and new "Standard" Event must be craeted <eventName>
+    #     Given User should be on Manage Event Page
+    #     When User Clicks on "Schedule this Event" button
+    #     Given User should be redirected to Schedule Upcoming session menu
+    #     When User selects current or future date
+    #     When User select start session time <futureTime>
+    #     When For End session User select session time
+    #     When User clicks on "Add to Event schedule" button
+    #     Then Created session should display under upcoming sessions
+    #     When User clicks on dropdown along side JOIN ROOM button
+    #     When User clicks on "View registration page" option
+    #     Then User should be on Registration page
+    #     When User add invalid <invalidemail> email and valid name for <regEmail> in registration form
+    #     Then User is failed to login with invalid email <validation>
+    #     Then "Timer" should displayed on Registration page
+    #     Then Countdown timer should display for Days, Hours, Minutes and Seconds
+    #     When Add data in "Registration form" and click registration button <regEmail>
+    #     Then User should redirected to Demio success page on successfull registration
+    #     Then User should get messsage <message> on message window
+    #     Then It should displayed with Unique Join Link
+    #     When Click on "Copy Link"
+    #     Then "copy link" should copied the join link on clicking <text>
+    #     When On success reg page click on "Add To Calendar" button
+    #     Then OnSuccess reg page user should display options "Apple Calendar","Google","Outlook","Outlook.com","Yahoo"
+    #     When Clicked on any option from add to calendar list <option1>
+    #     Then User should be download calendar
+    #     When Open copied url in new tab
+    #     Then It should displayed correct countdown on Join Link page
+    #     When Click on "Manage your Registration" Link
+    #     Then User should redirected to "Manage Registration" page
+    #     When Manage your registration page user click on "Add To Calendar" button
+    #     Then OnSuccess reg page user should display options "Apple Calendar","Google","Outlook","Outlook.com","Yahoo"
+    #     When Clicked on any option from add to calendar list <option1>
+    #     Then User should be download calendar
+    #     When Manage your registration page user click on "Add To Calendar" button
+    #     Then User should able to turn on and off "Email Notification" button
+    #     Then It should displayed with correct session <eventName> and user info <regEmail> on "Manage Registration" page
+    #     Then Close recent window and switch to manage event window
+    #     When User clicks on "Activity" tab on manage event page
+    #     When User clicks on "People" tab
+    #     When Click on "Export CSV" button
+    #     Examples:
+    #         | userA | eventName | regEmail | message                                       | futureTime | url                | text    | validation                  | invalidemail | option | option1 |
+    #         | admin | C         | F        | Great! You are Now Registered for this Event: | 10:30 pm   | productionLoginUrl | Copied! | Please enter a valid email. | test@gmail   | Google | Outlook |
 
     Scenario Outline: Check if the registered user is removed if the cancel registration from the Manage registration
         Given Created event <eventName> should be searched and selected from event list

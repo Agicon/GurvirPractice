@@ -11,7 +11,7 @@ Feature: Verify Standard event page features
         Then It should displayed with tabs: "All", "Standard", "Series", "Automated" and "Archived"
         Then there should be "Add New Event" button available
         Examples:
-            | userA | url                |
+            | userA | url             |
             | admin | stagingLoginUrl |
 
 
